@@ -13,7 +13,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-
 import tn.esprit.spring.entities.Contrat;
 import tn.esprit.spring.entities.Departement;
 import tn.esprit.spring.entities.Employe;
@@ -120,7 +119,7 @@ public class EmployeServiceImplTest {
 
 	@Test
 	public void testaffecterContratAEmploye() {
-		Contrat contrat1 = new Contrat(1, new Date(), "CVP", 500);
+		Contrat contrat1 = new Contrat(1, new Date(), "contract", 33500);
 		Employe employe1 = new Employe("Ahmed", "Sallemi", "Ahmed.sellami@esprit.tn");
 		employe1.setContrat(contrat1);
 		iemployeservice.affecterContratAEmploye(employe1.getId(), contrat1.getReference());
